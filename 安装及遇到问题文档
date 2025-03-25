@@ -22,3 +22,4 @@ print('all font list get from matplotlib.font_manager:')
 for f in sorted(mpl_fonts):
     print('\t' + f)”
 从而可以看到需要的字体，一般中文是拼音，可以使用以上family代码进行引用
+## 5. 如果出现字母间隔非常大的情况：比如ａａ发现调不回来，一般是不小心调成全角了，输入法调回来就行
