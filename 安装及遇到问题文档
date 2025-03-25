@@ -1,0 +1,24 @@
+##1. python 安装
+官网搜索找一个版本安装
+安装在D盘，如果安装在C盘更改文件需要管理员权限，在安装numpy库的时候会出现Defaulting to user installation because normal site-packages is not writeable
+安装失败
+##2.库安装基本方法
+（1）win+R，命令行窗口输入cmd
+（2）pip uninstall xx(如numpy、matplotlib等)
+##3.在运行.py软件之后可能会出现类似No module named 'scipy'的问题
+只需要按照步骤二，需要哪个安装哪个就好了
+ps：会出现版本问题，到时候出现再记录解决
+#matplotlib中文出现方块解决方法
+引用matplotlib库的时候使用import matplotlib.pyplot as plt语句
+使用plt.rc('font',family='YouYuan')  # 设置中文
+那么问题来了：如何查找已有字体并选择呢？
+使用以下代码调用matplotlib库：
+“from matplotlib.font_manager import FontManager
+import subprocess
+
+mpl_fonts = set(f.name for f in FontManager().ttflist)
+
+print('all font list get from matplotlib.font_manager:')
+for f in sorted(mpl_fonts):
+    print('\t' + f)”
+从而可以看到需要的字体，一般中文是拼音，可以使用以上family代码进行引用
