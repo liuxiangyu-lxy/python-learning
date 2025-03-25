@@ -1,3 +1,31 @@
-1.anaconda安装——官网搜索
+一、anaconda安装以及配置
+1.anaconda安装——官网搜索——安装在D盘——D:\Anaconda
 2.anaconda调试
   (1)jupyter——进入网页——New——Python３输入
+  print('hello')——shift+enter，看是否运行成功，成功则环境安装成功
+  (2)打开promot软件进入命令行窗口，print('hello')——enter，成功则环境安装成功
+  (3)promot窗口pip list查看已经安装的库
+3.配置环境变量
+  桌面右键——显示设置——搜索环境变量——编辑系统环境变量——高级——环境变量——用户变量——path——添加D:\Anaconda、D:\Anaconda\Scripts、D:\Anaconda\Library\bin
+二、anaconda命令行窗口使用
+4.promot窗口输入cls清屏
+  python——可以看到python的版本
+  记得exit()退出再进行其他的操作
+5.！创建以及进入虚拟环境
+  (1)创建以及移除代码
+  使用conda create -n 环境名 python=3.9，创建指定python版本的虚拟环境
+  使用conda create --prefix=安装路径\环境名 python=3.9，创建指定python版本和安装路径的虚拟环境
+  使用conda remove -n 环境名 --all删除环境[proceed是进行的意思]
+  (2)报错处理
+  在创建环境的时候会出现“ An unexpected error has occurred. Conda has prepared the above report.
+  If submitted, this report will be used by core maintainers to improve
+  future releases of conda.
+  Would you like conda to send this report to the core maintainers? [y/N]: n”的问题
+  方法一：找到c:\的condarc.json删掉就好，之后重启conda 的promot环境
+  方法二：关掉梯子
+    可以在anaconda的navigator（集成器）里面看到已经安装的
+    在vscode里面可以搜解释器然后可以看到已经安装的环境
+  (3)删掉之后重启promot命令行窗口使用 conda env list查看已经安装的环境
+  (4)进入虚拟环境
+    使用conda activate 环境名进入环境
+6. 进入虚拟环境后的库安装
