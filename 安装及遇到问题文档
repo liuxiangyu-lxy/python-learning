@@ -8,7 +8,7 @@
 ##3.在运行.py软件之后可能会出现类似No module named 'scipy'的问题
 只需要按照步骤二，需要哪个安装哪个就好了
 ps：会出现版本问题，到时候出现再记录解决
-#matplotlib中文出现方块解决方法
+##4.matplotlib中文出现方块解决方法
 引用matplotlib库的时候使用import matplotlib.pyplot as plt语句
 使用plt.rc('font',family='YouYuan')  # 设置中文
 那么问题来了：如何查找已有字体并选择呢？
