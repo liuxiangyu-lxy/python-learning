@@ -1,0 +1,10 @@
+1. python 安装
+官网搜索找一个版本安装
+安装在D盘，如果安装在C盘更改文件需要管理员权限，在安装numpy库的时候会出现Defaulting to user installation because normal site-packages is not writeable
+安装失败
+2.库安装基本方法
+（1）win+R，命令行窗口输入cmd
+（2）pip uninstall xx(如numpy、matplotlib等)
+3.在运行.py软件之后可能会出现类似No module named 'scipy'的问题
+只需要按照步骤二，需要哪个安装哪个就好了
+ps：会出现版本问题，到时候出现再记录解决
