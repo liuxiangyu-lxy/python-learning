@@ -42,7 +42,16 @@
   (3)电脑本身命令行窗口输入nvcc-V查看是否有CUDA平台，如果显示【'nvcc-V' 不是内部或外部命令，也不是可运行的程序或批处理文件。】则需要安装CUDA
   (4)安装官网：https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local
   (5)将exe文件放在新建的D:\CUDA中【具体配置看文件python深度学习1p9p10】——安装过程中会涉及到7GB左右的临时解压文件，在新建的文件夹中新建Tem文件夹，后续会自动删除，默认安装到C盘，如果找不到可以使用everything查找
-  (6)注意版本问题【对应版本参考python深度学习1p12，对应版本可能有点旧，如果有特殊需求后续自行查询对应torch、CUDA、python版本】
+  (6)注意版本问题【对应版本参考python深度学习1p12，对应版本可能有点旧，如果有特殊需求后续自行查询对应torch、CUDA、python版本】，本此安装CUDA11.3，也就对应cu113
 8.pytorach安装
-  (1)根据p12的版本对应表安装cu113
-  (2)进入刚刚创建的DL虚拟环境中，（python版本为）
+  (1)根据p12的版本对应表对应的cu113，对应的pytorch是1.12.0
+  (2)进入刚刚创建的DL虚拟环境中，（python版本为3.9），进入官网https://pytorch.org/get-started/previous-versions/，搜索pip install torch==1.12.0【注意需要使用pip安装而非conda安装否则会导入false】
+  (3)将代码pip install torch==1.12.0+cu113 torchvision==0.13.0+cu113 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu113复制到DL环境中
+  (4)看到有Successfully installed就算成功
+9.检查pytorch是否可用
+  (1)查看当前所有库：使用promot进入DL环境中，使用conda list命令列出当前所有库，torch应该有+cu113的后缀
+  (2)进入python解释器：promot进入>>python>>import torch ，若成功下载则会到下一行输入代码，之后输入torch.cuda.is_available()【经验：conda安装会false，需要pip安装】显示True即可
+四、pycharm安装（中间跳过了Jupyter）
+10.pycharm下载官网：https://www.jetbrains.com/pycharm/download/other.html，本次下载的是2020.1.3-win.exe
+  下载之后安装在D盘新建的D:\pycharm里面，选择①64-bit lanch，②.py，③add lanchers dir to the PAth，进去之后默认jetbrain，install就ok
+11.pycharm初次进入配置
