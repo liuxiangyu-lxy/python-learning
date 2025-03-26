@@ -43,3 +43,6 @@
   (4)安装官网：https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local
   (5)将exe文件放在新建的D:\CUDA中【具体配置看文件python深度学习1p9p10】——安装过程中会涉及到7GB左右的临时解压文件，在新建的文件夹中新建Tem文件夹，后续会自动删除，默认安装到C盘，如果找不到可以使用everything查找
   (6)注意版本问题【对应版本参考python深度学习1p12，对应版本可能有点旧，如果有特殊需求后续自行查询对应torch、CUDA、python版本】
+8.pytorach安装
+  (1)根据p12的版本对应表安装cu113
+  (2)进入刚刚创建的DL虚拟环境中，（python版本为）
