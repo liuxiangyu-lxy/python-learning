@@ -36,9 +36,10 @@
     [3]pip show numpy展示numpy库的版本
     [4]conda deactivate退出虚拟环境
 三、GPU基础
-7.查看电脑是否有Nvida以及CUDA（显卡的运算平台）
+7.查看电脑是否有Nvida以及CUDA（显卡的运算平台）以及下载安装
   (1)打开任务管理器——详细信息——性能——最下面GPU显示
   (2)区分：显卡的CUDA大写，下载pytorch里面也有cuda，用小写
   (3)电脑本身命令行窗口输入nvcc-V查看是否有CUDA平台，如果显示【'nvcc-V' 不是内部或外部命令，也不是可运行的程序或批处理文件。】则需要安装CUDA
   (4)安装官网：https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local
-  (5)将exe文件放在新建的D:\CUDA中【具体配置看文件python深度学习1】
+  (5)将exe文件放在新建的D:\CUDA中【具体配置看文件python深度学习1p9p10】——安装过程中会涉及到7GB左右的临时解压文件，在新建的文件夹中新建Tem文件夹，后续会自动删除，默认安装到C盘，如果找不到可以使用everything查找
+  (6)注意版本问题【对应版本参考python深度学习1p12，对应版本可能有点旧，如果有特殊需求后续自行查询对应torch、CUDA、python版本】
