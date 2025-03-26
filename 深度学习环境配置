@@ -24,8 +24,21 @@
   方法一：找到c:\的condarc.json删掉就好，之后重启conda 的promot环境
   方法二：关掉梯子
     可以在anaconda的navigator（集成器）里面看到已经安装的
-    在vscode里面可以搜解释器然后可以看到已经安装的环境
+    在vscode里面可以搜解释器然后可以看到已经安装的环境并选择
   (3)删掉之后重启promot命令行窗口使用 conda env list查看已经安装的环境
   (4)进入虚拟环境
     使用conda activate 环境名进入环境
 6. 进入虚拟环境后的库安装
+  (1)anaconda-navigator中可以选择环境之后安装各个版本的库
+  (2)进入虚拟环境
+    [1]conda list列出当前环境下的所有库
+    [2]安装指定版本的库pip install numpy==1.21.5 -i https://pypi.tuna.tsinghua.edu.cn/simple
+    [3]pip show numpy展示numpy库的版本
+    [4]conda deactivate退出虚拟环境
+三、GPU基础
+7.查看电脑是否有Nvida以及CUDA（显卡的运算平台）
+  (1)打开任务管理器——详细信息——性能——最下面GPU显示
+  (2)区分：显卡的CUDA大写，下载pytorch里面也有cuda，用小写
+  (3)电脑本身命令行窗口输入nvcc-V查看是否有CUDA平台，如果显示【'nvcc-V' 不是内部或外部命令，也不是可运行的程序或批处理文件。】则需要安装CUDA
+  (4)安装官网：https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exe_local
+  (5)将exe文件放在新建的D:\CUDA中【具体配置看文件python深度学习1】
